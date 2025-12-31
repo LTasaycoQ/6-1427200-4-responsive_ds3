@@ -1,5 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
     changeContentPriceMark();
+
+    let contador = 0;
+    const price = 187;
+    const elemento = document.getElementById('miContador');
+
+    const intervalo = setInterval(() => {
+        if (contador < price) {
+            contador++;
+            elemento.innerHTML = contador + ".00";
+        } else {
+            clearInterval(intervalo);
+        }
+    }, 10);
+
 });
 
 function changeContentPriceMark(numberContent) {
