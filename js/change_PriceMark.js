@@ -32,3 +32,16 @@ function changeContentPriceMark(numberContent) {
 
 }
 
+
+
+function modalsProducot() {
+    
+    fetch("components/modals.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("ProductoModalContent").innerHTML = data;
+        })
+        .catch(error => console.error("Error al cargar el HTML:", error));
+
+}
+

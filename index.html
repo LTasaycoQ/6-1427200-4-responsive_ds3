@@ -19,6 +19,7 @@
   <!-- carga del navbar -->
   <script src="./js/nav.js"></script>
   <script src="./js/change_PriceMark.js"></script>
+  <script src="./js/change_tabs.js"></script>
 
   <!-- titulo de la pagina -->
   <title>
@@ -219,28 +220,19 @@
 
                     <!-- Controles de pestañas -->
                     <div class="flex justify-center   mt-6 max-md:mt-6 mb-6">
-                      <div class="inline-flex rounded-md shadow-sm w-[90%] font-black">
+                      <div class="inline-flex rounded-md w-[90%] font-black">
 
-
-
-                        <button id="product-tab "
-                          class="px-6 w-[50%] py-2 flex items-center justify-center gap-[10px] text-xs md:text-sm font-medium rounded-l-lg bg-[#182746] text-white focus:z-10 focus:outline-none">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-shop" viewBox="0 0 16 16">
-                            <path
-                              d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z" />
+                        <button onclick="ModalImagen('0')" class="button">
+                          Imagenes <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+                            <path clip-rule="evenodd"
+                              d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                              fill-rule="evenodd"></path>
                           </svg>
-                          Producto
                         </button>
-                        <button id="images-tab"
-                          class="px-6 py-2 w-[50%] flex items-center gap-[10px] justify-center text-xs md:text-sm font-medium rounded-r-lg bg-gray-100 text-gray-700 focus:z-10 focus:outline-none">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-image-alt" viewBox="0 0 16 16">
-                            <path
-                              d="M7 2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0m4.225 4.053a.5.5 0 0 0-.577.093l-3.71 4.71-2.66-2.772a.5.5 0 0 0-.63.062L.002 13v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4.5z" />
-                          </svg>
-                          Imágenes
-                        </button>
+
+
+
+
                       </div>
                     </div>
                   </div>
@@ -373,29 +365,6 @@
               </div>
             </div>
 
-            <!-- Sección de galería de imágenes (oculta inicialmente) -->
-            <div id="images-section" class="hidden mt-6">
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-                  <img src="https://web.netperu100.com/cisco/catalyst/images/C9200L-24P-4G-E_front.jpg"
-                    alt="Vista frontal"
-                    class="w-full h-64 object-contain p-4 cursor-pointer hover:opacity-90 transition"
-                    onclick="viewImage(this.src)" />
-                </div>
-                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-                  <img src="https://web.netperu100.com/cisco/catalyst/images/C9200L-24P-4G-E_front_large.jpg"
-                    alt="Vista frontal ampliada"
-                    class="w-full h-64 object-contain p-4 cursor-pointer hover:opacity-90 transition"
-                    onclick="viewImage(this.src)" />
-                </div>
-                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-                  <img src="https://web.netperu100.com/cisco/catalyst/images/C9200L-24P-4G-E_back.jpg"
-                    alt="Vista posterior"
-                    class="w-full h-64 object-contain p-4 cursor-pointer hover:opacity-90 transition"
-                    onclick="viewImage(this.src)" />
-                </div>
-              </div>
-            </div>
 
 
           </div>
@@ -405,10 +374,45 @@
 
           <!-- Modal para imágenes -->
           <div id="image-modal"
-            class="fixed hidden inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
-            <span class="absolute top-4 right-4 text-white text-3xl cursor-pointer"
-              onclick="closeModal()">&times;</span>
-            <img id="modal-image" class="max-w-full max-h-full" src="" alt="Imagen ampliada" />
+            class="fixed hidden inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center ">
+
+            <div class="bg-white flex-col flex justify-between  w-[80%] h-[26em] rounded-md">
+              <div class="bg-[#182746]">
+                <div class="flex justify-between items-center p-4">
+                  <p class="text-[white] font-black text-2xl max-md:text-xl ml-[20px]">Imagenes - <span
+                      class="text-[#ff9103]"> 6-1427200-4 </span></p>
+                  <span class="mr-[20px] top-4 right-4 text-white text-5xl cursor-pointer"
+                    onclick="ModalImagen('1')">&times;</span>
+                </div>
+              </div>
+              <!-- Sección de galería de imágenes (oculta inicialmente) -->
+              <div class="p-8">
+                <div id="images-section" class=" h-[16em] touch-none overflow-auto mt-6">
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                      <img src="https://www.ds3comunicaciones.com/AMP/images/6-1427200-4-1.jpg" alt="Vista frontal"
+                        class="w-full h-64 object-contain p-4 cursor-pointer hover:opacity-90 transition"
+                        onclick="viewImage(this.src)" />
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                      <img src="https://www.ds3comunicaciones.com/AMP/images/Caja.jpg" alt="Vista frontal ampliada"
+                        class="w-full h-64 object-contain p-4 cursor-pointer hover:opacity-90 transition"
+                        onclick="viewImage(this.src)" />
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                      <img src="https://web.netperu100.com/cisco/catalyst/images/C9200L-24P-4G-E_back.jpg"
+                        alt="Vista posterior"
+                        class="w-full h-64 object-contain p-4 cursor-pointer hover:opacity-90 transition"
+                        onclick="viewImage(this.src)" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+
           </div>
         </div>
 
@@ -795,8 +799,7 @@
         <!-- Columna 1: Logo y contacto -->
         <div class="space-y-4">
           <div class=" rounded-full flex items-center ">
-            <img src="icons/logoDS3.png" alt="DS3 Comunicaciones"
-              class="w-[9em] h-auto" />
+            <img src="icons/logoDS3.png" alt="DS3 Comunicaciones" class="w-[9em] h-auto" />
           </div>
 
           <div class="space-y-2 ">
@@ -814,8 +817,7 @@
 
           <div class="space-y-2 ">
             <h3 class="text-lg font-bold ">Correo</h3>
-            <a href="mailto:netperu100@hotmail.com"
-              class="flex items-center  hover:text-blue-600 transition-colors">
+            <a href="mailto:netperu100@hotmail.com" class="flex items-center  hover:text-blue-600 transition-colors">
               <i class="fas fa-envelope mr-2"></i>
               netperu100@hotmail.com
             </a>
@@ -904,8 +906,8 @@
             <h3 class="text-lg font-bold mb-2">
               Horario de Atención
             </h3>
-            <p >Lunes a Viernes: 9:00 - 18:00</p>
-            <p >Sábados: 9:00 - 13:00</p>
+            <p>Lunes a Viernes: 9:00 - 18:00</p>
+            <p>Sábados: 9:00 - 13:00</p>
           </div>
         </div>
       </div>
