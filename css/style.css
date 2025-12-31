@@ -263,7 +263,7 @@ h3:hover .button-text {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
   padding-block: 0.5rem;
   padding-inline: 1.25rem;
-  background-color: rgb(34, 73, 99);
+  background-color: #182746;
   border-radius: 9999px;
   display: flex;
   align-items: center;
@@ -271,16 +271,18 @@ h3:hover .button-text {
   cursor: pointer;
   color: #ffff;
   gap: 10px;
+  height: 37px;
   font-weight: bold;
   border: 3px solid #ffffff4d;
   outline: none;
   overflow: hidden;
-  font-size: 19px;
+  font-size: 17px;
 }
 
 .icon {
   width: 24px;
   height: 24px;
+  color: #fd8d00;
   transition: all 0.3s ease-in-out;
 }
 
