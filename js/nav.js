@@ -72,6 +72,7 @@ function initializeMobileMenu() {
 
 function initializeSearchModal() {
     const searchModal = document.getElementById('search-modal');
+    const searchButton = document.getElementById('search-button');
     const mobileSearchButton = document.getElementById('mobile-search-button');
     const closeSearch = document.getElementById('close-search');
 
@@ -90,6 +91,7 @@ function initializeSearchModal() {
         }
     }
 
+    if (searchButton) searchButton.addEventListener('click', openSearchModal);
     if (mobileSearchButton) mobileSearchButton.addEventListener('click', openSearchModal);
     if (closeSearch) closeSearch.addEventListener('click', closeSearchModal);
 
