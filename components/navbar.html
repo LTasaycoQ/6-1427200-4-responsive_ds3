@@ -1,7 +1,7 @@
 <nav class="bg-white w-full shadow-md border z-10">
   <div class="container mx-auto px-4">
     <!-- Desktop Navbar -->
-    <div class=" w-full flex  justify-between  relative items-center py-4">
+    <div class=" w-full flex max-lg:hidden justify-between  relative items-center py-4">
       <!-- Logo y nombre -->
       <div class="flex items-center w-[13.3%] max-lg:w-[90%] ">
         <button id="mobile-menu-button" class="p-2 rounded-full lg:hidden hover:bg-gray-300 transition-colors">
@@ -79,7 +79,44 @@
     </div>
 
 
+    <div class="lg:hidden flex flex-col gap-2">
+      <!-- navbar superior  -->
+      <div class="flex justify-between items-center py-2">
+        <!-- div izquierdo -->
+        <div class="flex gap-1">
+          <!-- boton hamburgesa -->
+          <button id="mobile-menu-button" class="p-2 rounded-full hover:bg-gray-300 transition-colors">
+            <i class="fas fa-bars text-black"></i>
+          </button>
 
+          <!-- Logo -->
+          <div class="flex items-center gap-2">
+            <img src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg" alt="NetPeru Logo" class="h-10" />
+            <img src="http://www.ds3comunicaciones.com/cisco/images/logo-cisco.gif" alt="NetPeru Logo" class="h-10" />
+          </div>
+        </div>
+
+        <!-- Botones buscar -->
+        <button id="mobile-search-button"
+          class="p-2 rounded-md hover:bg-gray-300 transition-colors border border-black flex gap-3 items-center">
+          <i class="fas fa-search text-black"></i>
+        </button>
+      </div>
+
+      <!-- nabvar inferior -->
+      <div class="py-2 pl-3">
+        <div class="flex items-start">
+          <i class="fas fa-phone-alt mt-1 mr-1 text-black"></i>
+          <p class="">996533223</p>
+          <i class="pl-4 fas fa-phone-alt mt-1 mr-1 text-black"></i>
+          <p class="">994428965</p>
+        </div>
+        <div class="flex items-center">
+          <i class="fas fa-envelope mr-1 text-black"></i>
+          <span>netperu100@hotmail.com</span>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Menú móvil desplegable - Lado derecho -->
